@@ -22,6 +22,8 @@ public class Products {
     public Response response;
     public int ResponseCode;
     public ResponseBody body;
+    public JSONObject requestParams;
+    public String s;
 
     // get products feature
     @Given("I hit the url of get products API endpoint")
@@ -56,8 +58,12 @@ public class Products {
     public void I_hit_the_url_of_post_product_API_endpoint() {
         RestAssured.baseURI = "https://fakestoreapi.com/";
         httpRequest = given();
-        JSONObject requestParams = new JSONObject();
-        requestParams.put("title", "shoes");
+    }
+
+    @And("I pass the request body of product title {}")
+    public void I_pass_the_request_body_of_product_title(String title) {
+        requestParams = new JSONObject();
+        requestParams.put("title", title);
         requestParams.put("price", 13.5);
         requestParams.put("description", "lorem ipsum");
         requestParams.put("image", "https://i.pravatar.cc");
@@ -66,11 +72,72 @@ public class Products {
         httpRequest.body(requestParams.toJSONString());
         Response response = httpRequest.post("products");
         ResponseBody body = response.getBody();
+
+        JsonPath jsnpath = response.jsonPath();
+        s = jsnpath.getJsonObject("id").toString();
+
         System.out.println(response.getStatusLine());
         System.out.println(body.asString());
     }
 
-    @And("I pass the request body of product title {}")
-    public void I_pass_the_request_body_of_product_title(String arg0) {
+    @Then("I receive the response body with id as {}")
+    public void I_receive_the_response_body_with_id_as(String id) {
+        assertEquals(id, s);
+    }
+
+    // update products feature
+    @Given("I hit the url of put product API endpoint")
+    public void I_hit_the_url_of_put_product_API_endpoint() {
+        RestAssured.baseURI = "https://fakestoreapi.com/";
+        requestParams = new JSONObject();
+    }
+
+    @When("I pass the url of products in the request with {}")
+    public void I_pass_the_url_of_products_in_the_request_with(String ProductNumber) {
+        httpRequest = given();
+
+        requestParams.put("title", "test product");
+        requestParams.put("price", "13.5");
+        requestParams.put("description", "lorem ipsum");
+        requestParams.put("image", "https://i.pravatar.cc");
+        requestParams.put("category", "foot wear");
+
+        httpRequest.body(requestParams.toJSONString());
+        response = httpRequest.put("products/" + ProductNumber);
+        ResponseBody body = response.getBody();
+
+        JsonPath jsnpath = response.jsonPath();
+        s = jsnpath.getJsonObject("id").toString();
+
+        System.out.println(response.getStatusLine());
+        System.out.println(body.asString());
+    }
+
+    // delete products feature
+    @Given("I hit the url of DELETE product API endpoint")
+    public void I_hit_the_url_of_DELETE_product_API_endpoint() {
+        RestAssured.baseURI = "https://fakestoreapi.com/";
+        requestParams = new JSONObject();
+    }
+
+    @When("I pass the url of delete products in the request with {}")
+    public void I_pass_the_url_of_delete_products_in_the_request_with(String ProductNumber) {
+        httpRequest = given();
+
+        requestParams.put("title", "test product");
+        requestParams.put("price", "13.5");
+        requestParams.put("description", "lorem ipsum");
+        requestParams.put("image", "https://i.pravatar.cc");
+        requestParams.put("category", "foot wear");
+
+        httpRequest.body(requestParams.toJSONString());
+        response = httpRequest.put("products/" + ProductNumber);
+        ResponseBody body = response.getBody();
+
+        JsonPath jsnpath = response.jsonPath();
+        s = jsnpath.getJsonObject("id").toString();
+
+        System.out.println(response.getStatusLine());
+        System.out.println(body.asString());
     }
 }
