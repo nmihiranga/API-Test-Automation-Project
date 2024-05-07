@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="909ab7a2-2c6d-4089-906d-0cbb266667f3" name="Changes" comment="insert product feature added">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/screenshots/report1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/screenshots/report2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/screenshots/screenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Products.java" afterDir="false" />
-    </list>
+    <list default="true" id="909ab7a2-2c6d-4089-906d-0cbb266667f3" name="Changes" comment="new commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715074994332</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new commit">
+      <option name="closed" value="true" />
+      <created>1715110396447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715110396447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +235,8 @@
     <MESSAGE value="get products feature added" />
     <MESSAGE value="feature update" />
     <MESSAGE value="insert product feature added" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert product feature added" />
+    <MESSAGE value="new commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
