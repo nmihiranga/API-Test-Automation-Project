@@ -16,7 +16,6 @@ import static org.junit.Assert.*;
 
 public class Products {
 
-    //public int statusCode;
     public RequestSpecification httpRequest;
     public Response response;
     public int ResponseCode;
@@ -45,7 +44,6 @@ public class Products {
     @Then("I verify that the rate of the first product is {}")
     public void I_verify_that_the_rate_of_the_first_product_is(String rate) {
         body = response.getBody();
-        //String responseBody = body.asString();
         JsonPath jsnPath = response.jsonPath();
 
         String s = jsnPath.getJsonObject("rating[0].rate").toString();
