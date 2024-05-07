@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="909ab7a2-2c6d-4089-906d-0cbb266667f3" name="Changes" comment="insert product feature added">
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/DeleteProduct.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/UpdateProduct.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/screenshots/report1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/screenshots/report2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/screenshots/screenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/InsertProduct.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/InsertProduct.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Products.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +61,8 @@
     "Cucumber Java.Scenario: Validate POST product API works correctly.executor": "Debug",
     "Cucumber Java.Scenario: Validate PUT product API status code works correctly.executor": "Run",
     "Cucumber Java.Scenario: Verify the rate of the first product is correct.executor": "Debug",
+    "JUnit.TestRunner.executor": "Run",
+    "JUnit.testRunner.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -70,8 +74,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IntelliJ\API-Test-Automation-Project\src\test\java\features" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ\API-Test-Automation-Project\src\test\screenshots" />
+    </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.All Features in: features">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="All Features in: features" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features" />
@@ -131,26 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Validate POST product API works correctly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/InsertProduct.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="API-Test-Automation-Project" />
-      <option name="NAME_FILTER" value="^Validate POST product API works correctly$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Validate POST product API works correctly$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Validate POST product API works correctly" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: Validate PUT product API status code works correctly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/UpdateProduct.feature" />
@@ -171,13 +158,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API-Test-Automation-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.All Features in: features" />
         <item itemvalue="Cucumber Java.Scenario: Validate DELETE product API status code works correctly" />
         <item itemvalue="Cucumber Java.Scenario: Validate PUT product API status code works correctly" />
         <item itemvalue="Cucumber Java.Scenario: Validate POST product API response body works correctly" />
-        <item itemvalue="Cucumber Java.Scenario: Validate POST product API works correctly" />
       </list>
     </recent_temporary>
   </component>
